@@ -2,9 +2,10 @@ import React from 'react';
 
 class Box extends React.Component {
     render () {
+        // console.log(this.props)
         return ( 
             <div className="box-wrapper">
-                BOX
+                {this.props.name || "BOX"}
             </div>
         )
     }

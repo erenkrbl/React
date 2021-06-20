@@ -1,7 +1,8 @@
-export function Card () {
+export function Card ({name}) {
+    //const {name } = props;
     return (
         <div className="card-wrapper">
-            MY CARD
+            {name || "MY CARD"}
         </div>
     )
 }

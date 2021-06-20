@@ -17,8 +17,8 @@ export function addTwoNumbers3(fnumber, snumber) {
 export default function App() {
   return (
     <div>
-       <Card/>
-       <Box/>
+       <Card name="Jane"/>
+       <Box name="John"/>
     </div>
 
   );
