@@ -1,5 +1,7 @@
-.card-wrapper {
-    width: 150px;
+import styled from "styled-components"
+
+export const StyledCardWrapper = styled.div`
+width: 150px;
     height: 200px;
     border: 1px solid rgba(202, 101, 101, 0.2);
     border-radius: 5px;
@@ -7,9 +9,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
-}
 
-P {
+`;
+
+export const StyledText = styled.p`
     color: red;
-}
+`;
