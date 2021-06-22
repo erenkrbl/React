@@ -1,11 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Card } from "../Card";
 import axios from "axios";
 
-const apiKey = ""; // temporary
+const apiKey = "cef68a8b02832fbb213f0ca6147108dd"; // temporary
 const baseUrl = "https://api.themoviedb.org/3/search/movie";
+const baseImageUrl = "https://image.tmdb.org/t/p/w500";
+
+    // api call - axios
+    // axios parameters api_key page query
+    // data state useState
+    // Data mapping
 
 export const CardList = () => {
+    const [movieList, setMovieList] = useState(null)
+    
 
     useEffect(() => {
         axios.get(baseUrl, {
@@ -15,14 +23,27 @@ export const CardList = () => {
                 query: "Star Wars" // TODO:from input
             }
         })
-        .then((res) =>console.log(res))
+        .then((res) => setMovieList(res?.data?.results))
+        .catch((err) => console.log(err))
     }, [])
 
+    console.log(movieList)
 
-    // useState
-    // Data mapping
+    
     
     return (
-        <Card/>
+        <>
+            {
+                movieList?.map((movie, index) => {
+                    return <Card
+                            key={index}
+                            title={movie.title}
+                            imgSrc={baseImageUrl + movie.poster_path}
+                            
+                        />
+                })
+            }
+        </>
+        
     )
 }

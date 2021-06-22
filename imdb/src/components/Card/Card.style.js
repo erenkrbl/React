@@ -1,12 +1,13 @@
 import styled from "styled-components"
 
 export const StyledCardWrapper = styled.div`
-width: 150px;
-    height: 200px;
-    border: 1px solid rgba(202, 101, 101, 0.2);
+    width: 9.375rem;
+    height: 12.5rem;
+    border: 0.0625rem solid rgba(202, 101, 101, 0.2);
     border-radius: 5px;
-    box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0.1875rem 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -14,4 +15,11 @@ width: 150px;
 
 export const StyledText = styled.p`
     color: red;
+    margin: 0;
+    font-size: 0.5rem;
+`;
+
+export const StyledMovieImage = styled.img`
+    width: auto;
+    height: 85%;
 `;
