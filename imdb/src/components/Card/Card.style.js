@@ -19,7 +19,9 @@ export const StyledText = styled.p`
     font-size: 0.5rem;
 `;
 
+
 export const StyledMovieImage = styled.img`
     width: auto;
     height: 85%;
+    
 `;

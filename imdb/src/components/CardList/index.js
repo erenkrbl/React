@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "../Card";
 import axios from "axios";
+import { StyledCardList } from "./CardList.style";
 
-const apiKey = ""; // temporary
+const apiKey = "cef68a8b02832fbb213f0ca6147108dd"; // temporary
 const baseUrl = "https://api.themoviedb.org/3/search/movie";
 const baseImageUrl = "https://image.tmdb.org/t/p/w500";
 
@@ -30,9 +31,8 @@ export const CardList = () => {
     console.log(movieList)
 
     
-    
     return (
-        <>
+        <StyledCardList>
             {
                 movieList?.map((movie, index) => {
                     return <Card
@@ -43,7 +43,7 @@ export const CardList = () => {
                         />
                 })
             }
-        </>
+        </StyledCardList>
         
     )
 }
