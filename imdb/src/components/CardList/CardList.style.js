@@ -5,5 +5,4 @@ export const StyledCardList = styled.div`
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
-    align-items:center;
 `;

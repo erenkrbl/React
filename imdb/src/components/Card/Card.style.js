@@ -10,6 +10,12 @@ export const StyledCardWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: 0.2s;
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0.3rem 0.3rem 0.9rem rgba(0, 0, 0, 0.1);
+    }
 
 `;
 
