@@ -1,9 +1,15 @@
+import React, { useState } from 'react'
+
 import { StyledSearchBox, StyledSearchInput, StyledSearchButton } from "./SearchBox.style";
-const SearchBox = () => {
+
+const SearchBox = ({setSearchKeyword}) => {
+    const [inputValue, setInputValue] = useState("");
+
+
     return (
         <StyledSearchBox>
-            <StyledSearchInput isColored />
-            <StyledSearchButton onClick={() =>{}}>Search</StyledSearchButton>
+            <StyledSearchInput isColored={false} onChange={(e) =>setInputValue(e.target.value)} />
+            <StyledSearchButton onClick={() => setSearchKeyword(inputValue)}>Search</StyledSearchButton>
             
         </StyledSearchBox>
     )

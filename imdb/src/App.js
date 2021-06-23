@@ -9,7 +9,8 @@ const baseUrl = "https://api.themoviedb.org/3/search/movie";
 const baseImageUrl = "https://image.tmdb.org/t/p/w500";
 
 function App() {
-  const [movieList, setMovieList] = useState(null)
+  const [movieList, setMovieList] = useState([]);
+  const [searchKeyword, setSearchKeyword] = useState("");
     
 
     useEffect(() => {
@@ -17,17 +18,17 @@ function App() {
             params: {
                 api_key: apiKey,
                 page: 1,
-                query: "Star Wars" // TODO:from input
+                query: searchKeyword
             }
         })
         .then((res) => setMovieList(res?.data?.results))
         .catch((err) => console.log(err))
-    }, [])
+    }, [searchKeyword])
 
     //console.log(movieList)
   return (
     <div className="App">
-      <SearchBox />
+      <SearchBox setSearchKeyword={setSearchKeyword} />
       <CardList movieList={movieList} baseImageUrl={baseImageUrl} />
       
     </div>

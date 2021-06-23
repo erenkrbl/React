@@ -17,9 +17,9 @@ export const StyledSearchInput = styled.input`
         `    
     }
 
-    /* color: ${p => p.color}; */
     border-radius: 0.3rem;
     margin-right: 0.5rem;
+    /* color: ${p => p.color}; */
 
 `;
 
