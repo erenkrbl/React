@@ -1,9 +1,9 @@
-import { StyledSearchBox} from "./SearchBox.style";
+import { StyledSearchBox, StyledSearchInput, StyledSearchButton } from "./SearchBox.style";
 const SearchBox = () => {
     return (
         <StyledSearchBox>
-            <input />
-            <button onClick={() =>{}}>Search</button>
+            <StyledSearchInput isColored />
+            <StyledSearchButton onClick={() =>{}}>Search</StyledSearchButton>
             
         </StyledSearchBox>
     )
