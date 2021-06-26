@@ -5,19 +5,19 @@ const SingleComment = (props) => {
     return (
         <div className='comment'>
             <a href="/" className='avatar'>
-                <img src={ props.picture } alt="profile picture" /> 
+                <img src={ props.picture } alt="profile" /> 
             </a>
             <div className='content'>
                 <a href="/" className='autor'>
-                    {props.name}
+                    { props.name }
                 </a>
                 <div className='metadata'>
                     <span className='date'>
-                        {props.date}
+                        { props.date }
                     </span>
                 </div>
                 <div className='text'>
-                    {props.comment}
+                    { props.text }
                 </div>
             </div>
         </div>   
