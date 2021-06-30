@@ -1,9 +1,10 @@
 import React from "react";
 
-const HemisphereDisplay = () => {
+const HemisphereDisplay = ({ latitude }) => {
+    console.log(latitude)
     return (
         <div>
-            Hey you are in Northern hemisphere!!!
+            { latitude }
         </div>
     )
 }
