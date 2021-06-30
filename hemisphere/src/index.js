@@ -21,26 +21,29 @@ class App extends React.Component{
             this.state = { latitude: 25, longitude: 23 }
             window.navigator.geolocation.getCurrentPosition(
                 (position) => {
-                    this.setState({ latitude: position.coords.latitude, longitude: position.coords.longitude,
-                    errorMessage: ''  })
+                    this.setState({ 
+                        latitude: position.coords.latitude, 
+                        errorMessage: ''  })
                 },
                 (error) => {
-                    this.setState({errorMessage: error.message})
+                    this.setState({ errorMessage: error.message })
                 }
             );
         
     }
     
     render () {
-        return(
-            <div>
-                { this.state.latitude }
-                <hr/>
-                { this.state.longitude }
-                <hr />
-                { this.state.errorMessage }
-            </div>
-        )
+        
+        if(this.state.errorMessage && !this.state.latitude) {
+            return <div>{ this.state.errorMessage }</div>
+        }
+        if(!this.state.errorMessage && this.state.latitude) {
+            return <div>{ this.state.latitude }</div>
+        }
+        else {
+            return <div>Loading......</div>
+        }
+        
     }
 }
 
