@@ -16,17 +16,17 @@ import ReactDOM from "react-dom";
 // }
 
 class App extends React.Component{
-    constructor(props) {
-        super(props) 
-            this.state = { latitude: 25, longitude: 23 }   
-    }
+    // constructor(props) {
+    //     super(props) 
+    //         this.state = { latitude: 25, errorMessage: '' }   
+    // }
+
+    state = { latitude: 25, errorMessage: '' }
 
     componentDidMount(){
         window.navigator.geolocation.getCurrentPosition(
             (position) => {
-                this.setState({ 
-                    latitude: position.coords.latitude, 
-                    errorMessage: ''  })
+                this.setState({ latitude: position.coords.latitude })
             },
             (error) => {
                 this.setState({ errorMessage: error.message })
