@@ -1,16 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
 import HemisphereDisplay from "./hemisphereDisplay";
-window.navigator.geolocation.getCurrentPosition(
-    (position) => console.log(position),
-    (error) => console.log(error)
-);
 
 const App = () => {
+    window.navigator.geolocation.getCurrentPosition(
+        (position) => console.log(position),
+        (error) => console.log(error)
+    );
     return (
         <div>
-            Hello
+            latute:
             <HemisphereDisplay />
         </div>
     )
