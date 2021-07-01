@@ -1,9 +1,9 @@
 import React from 'react';
 
 class SearchInput extends React.Component {
-    // constructor(props){
-    //     super(props);
-    //     state: this.state
+
+    // onInputChange = (event) => {
+    //     console.log(event.target.value)
     // }
 
     render(){
@@ -12,7 +12,10 @@ class SearchInput extends React.Component {
                 <form className='ui form'>
                     <div className='field'>
                         <div className='ui massive icon input'>
-                            <input type="text" placeholder='search...'/>
+                            <input 
+                                type="text" 
+                                placeholder='search...' 
+                                onChange={(event) => console.log(event.target.value)}/>
                             <i className='search icon'></i>
                         </div>
                     </div>
