@@ -5,7 +5,7 @@ class SearchInput extends React.Component {
         super(props);
         this.state = { entry: '' };
 
-        this.onFormSubmit = this.onFormSubmit.bind(this);
+        // this.onFormSubmit = this.onFormSubmit.bind(this);
     }
 
     // onInputChange = (event) => {
@@ -13,9 +13,9 @@ class SearchInput extends React.Component {
     // }
     
 
-    onFormSubmit(event) {
+    onFormSubmit = (event) => {
         event.preventDefault();
-        console.log(this.state.entry);
+        this.props.onSearchSubmit(this.state.entry);
     } 
     
 
