@@ -4,7 +4,7 @@ import SearchInput from './SearchInput';
 
 const App = () => {
     return (
-        <div>
+        <div className='ui container' style={{ marginTop: '30px' }}>
             <SearchInput />
         </div>
     )
