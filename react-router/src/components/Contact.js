@@ -1,6 +1,10 @@
 import React from 'react'
 
-const Contact = () => {
+const Contact = (props) => {
+    setTimeout(()=> {
+        props.history.push('/about')
+    }, 2000)
+    //console.log(props);
     return (
         <div 
             className='ui raised very padded text container segment'
