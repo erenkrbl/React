@@ -2,6 +2,7 @@ import React from 'react';
 import {
   BrowserRouter,
   Route,
+  Switch
 } from 'react-router-dom'
 import Navbar from './components/Navbar';
 import Home from './components/Home';
@@ -14,10 +15,13 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Navbar />
-        <Route exact path='/' component={Home} />
-        <Route path='/about' component={About} />
-        <Route path='/contact' component= {Contact} />
-        <Route path='/card/:user' component={Card} />
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path='/about' component={About} />
+          <Route path='/contact' component= {Contact} />
+          {/* <Route path='/card/:user' component={Card} /> */}
+          <Route path='/card/:user' component={Card} />
+        </Switch>
       </div>
     </BrowserRouter>
   );
