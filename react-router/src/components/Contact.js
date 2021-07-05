@@ -1,9 +1,9 @@
 import React from 'react'
 
 const Contact = (props) => {
-    setTimeout(()=> {
-        props.history.push('/about')
-    }, 2000)
+    // setTimeout(()=> {
+    //     props.history.push('/about')
+    // }, 2000)
     //console.log(props);
     return (
         <div 
