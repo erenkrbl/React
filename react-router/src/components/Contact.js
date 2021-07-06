@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Modal from './Modal';
+import { connect } from 'react-redux';
 
 
-const Contact = () => {
+const Contact = (props) => {
+    console.log(props.cards);
     // setTimeout(()=> {
     //     props.history.push('/about')
     // }, 2000)
@@ -31,4 +33,13 @@ const Contact = () => {
     )
 }
 
-export default Contact;
+const mapStateToProps = (state) => {
+    //const cards = state.cards;
+    const { cards } = state;
+    return {
+        // cards: cards
+        cards
+    }
+}
+
+export default connect(mapStateToProps) (Contact);
