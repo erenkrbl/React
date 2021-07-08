@@ -3,6 +3,11 @@ import { connect } from 'react-redux'
 
 class Card extends React.Component {
 
+    onButtonClick = () => {
+        let { id } = this.props.card;
+        this.props.deleteCard(id)
+    }
+
     // state = { user: ''}
 
     // componentDidMount() {
@@ -19,7 +24,10 @@ class Card extends React.Component {
                 style={{ marginTop:'80px' }}
             >
             <h3 className='ui header'>{ title }</h3>
-            <p>{ body }</p>     
+            <p>{ body }</p>
+            <button className='ui primary right floated button' onClick={this.onButtonClick}>
+                Delete
+            </button>     
         </div>
         )
     }
@@ -31,5 +39,11 @@ const mapStateToProps = (state, ownProps) => {
         card: state.cards.find(card => card.title === title)
     }
 }
+const mapDispatchToProps = (dispatch) => {
+    return {
+        deleteCard: (id) => {dispatch({type:'DELETE_CARD', id})} 
+    }
 
-export default connect(mapStateToProps) (Card);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps) (Card);
