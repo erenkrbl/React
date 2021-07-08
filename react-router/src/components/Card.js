@@ -1,11 +1,12 @@
 import React from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
 class Card extends React.Component {
 
     onButtonClick = () => {
         let { id } = this.props.card;
-        this.props.deleteCard(id)
+        this.props.deleteCard(id);
+        this.props.history.push('/contact');
     }
 
     // state = { user: ''}
@@ -41,7 +42,7 @@ const mapStateToProps = (state, ownProps) => {
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-        deleteCard: (id) => {dispatch({type:'DELETE_CARD', id})} 
+        deleteCard: (id) => { dispatch({type:'DELETE_CARD', id}) } 
     }
 
 }
