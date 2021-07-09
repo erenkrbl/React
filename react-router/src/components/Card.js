@@ -1,36 +1,35 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { deleteCard } from '../actions/cardActions';
+import { deleteCard, fetchUser } from '../actions/cardActions';
 
 class Card extends React.Component {
 
-    onButtonClick = () => {
-        let { id } = this.props.card;
-        this.props.deleteCard(id);
-        this.props.history.push('/contact');
+    componentDidMount() {
+        this.props.fetchUser();
     }
 
-    // state = { user: ''}
-
-    // componentDidMount() {
-    //     let user = this.props.match.params.user
-    //     this.setState({ user })
-    // }
 
     render() {
-        //const { user } = this.state
-        const { title, body } = this.props.card;
-        return (
-            <div 
-                className='ui raised very padded text container segment'
-                style={{ marginTop:'80px' }}
-            >
-            <h3 className='ui header'>{ title }</h3>
-            <p>{ body }</p>
-            <button className='ui primary right floated button' onClick={this.onButtonClick}>
-                Delete
-            </button>     
-        </div>
+        console.log(this.props.users)
+        const { users } = this.props;
+        return(
+           users.map(user => {
+               return (
+                    <div 
+                        className='ui raised very padded text container segment'
+                        style={{ marginTop:'80px' }}
+                        key={user.id}
+                    >
+                    <h3 className='ui header'>{ user.name }</h3>
+                    <p>{ user.username }</p>
+                    <p>{ user.email }</p>
+                
+                
+                    
+                    
+                    </div>
+               )
+           })
         )
     }
 }
@@ -38,12 +37,14 @@ class Card extends React.Component {
 const mapStateToProps = (state, ownProps) => {
     let title = ownProps.match.params.user;
     return {
-        card: state.cards.find(card => card.title === title)
+        card: state.cards.find(card => card.title === title),
+        users: state.users
     }
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-        deleteCard: (id) => { dispatch(deleteCard(id)) } 
+        deleteCard: (id) => { dispatch(deleteCard(id)) },
+        fetchUser: () => { dispatch(fetchUser()) } 
     }
 
 }
