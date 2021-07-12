@@ -1,6 +1,8 @@
 import React from 'react';
 import { Navbar, TodoList } from './components';
-import ThemeContextProvider from './contexts/ThemeContext';
+import { ThemeContextProvider, AuthContextPovider } from './contexts';
+// import AuthContextpPovider from './contexts/AuthContext';
+// import ThemeContextProvider from './contexts/ThemeContext';
 //import TodoList from './components/TodoList';
 
 function App() {
@@ -8,8 +10,10 @@ function App() {
     <div className="App">
       <div className='ui raised very padded text container segment'>
         <ThemeContextProvider>
-          <Navbar />
-          <TodoList /> 
+          <AuthContextPovider>
+            <Navbar />
+            <TodoList /> 
+          </AuthContextPovider>
         </ThemeContextProvider>
 
       </div>
