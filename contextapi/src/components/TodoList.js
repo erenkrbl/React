@@ -27,7 +27,7 @@ import { ThemeContext, TodoListContext  } from '../contexts';
 const TodoList = () =>{
     const [todo, setTodo] = useState('');
     const {isDarkTheme, darkTheme, lightTheme, changeTheme} = useContext(ThemeContext);
-    const { todos, addTodo } = useContext(TodoListContext);
+    const { todos, addTodo, removeTodo } = useContext(TodoListContext);
     const theme = isDarkTheme ? darkTheme : lightTheme;
 
     const handleChange = (e) => {
@@ -37,7 +37,12 @@ const TodoList = () =>{
     const handleFormSubmit = (e) => {
         e.preventDefault();
         addTodo(todo);
-    }
+    };
+
+    const handleRemoveTodo = (e) => {
+        const id = e.target.id;
+        removeTodo(id);
+    };
 
     return (
         <div  style={{ 
@@ -48,7 +53,7 @@ const TodoList = () =>{
             {
                 todos.length ? (
                     todos.map(todo => {
-                        return <p key={todo.id} className='item'>{todo.text}</p>
+                        return <p key={todo.id} id={todo.id} onClick={handleRemoveTodo} className='item'>{todo.text}</p>
                     }) 
                 ) : (
                     <div>You have no todos</div>
