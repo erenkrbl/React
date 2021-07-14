@@ -1,4 +1,4 @@
-import React, { createContext } from 'react'
+import React, { createContext } from 'react';
 
 export const ThemeContext = createContext();
 
@@ -27,5 +27,21 @@ class ThemeContextProvider extends React.Component {
         );
     }
 }
+
+
+
+// const ThemeContextProvider = (props) => {
+//     const [isDarkTheme, setIsDarkTheme] = useState(true); 
+//     const changeTheme = () => {
+//         setIsDarkTheme(!isDarkTheme)
+//     }
+//     return (
+//         <ThemeContext.Provider value={{ isDarkTheme, changeTheme }}>
+//             { props.children }
+//         </ThemeContext.Provider>
+//     );    
+// }
+
+
 
 export { ThemeContextProvider };
