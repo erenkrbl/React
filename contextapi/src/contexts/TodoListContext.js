@@ -12,7 +12,7 @@ const todosReducer = (state, action) => {
                     id: Math.random()
                 }
             ];
-        case 'REMOVE_TOD':
+        case 'REMOVE_TODO':
             return state.filter(todo => todo.id !== Number(action.id));
 
         default:
@@ -48,9 +48,10 @@ function TodoListContextProvider({ children }) {
     //         return todo.id !== Number(id);
     //     }))
     // };
+    //  <TodoListContext.Provider value={{ todos, addTodo, removeTodo }}>
 
     return (
-        <TodoListContext.Provider value={{ todos, dispatch }}>
+        <TodoListContext.Provider value={{ todos, dispatch }}> 
             { children }
         </TodoListContext.Provider>
     );
