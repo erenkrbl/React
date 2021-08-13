@@ -12,8 +12,14 @@ const Navbar = () => {
     const bottom = tempBtn.bottom - 3;
     openSubMenu(page, { center, bottom });
   }
+
+  const handleSubMenu = (e) => {
+    if(!e.target.classList.contains('link-btn')) {
+      closeSubMenu();
+    }
+  }
   return (
-    <nav className="nav">
+    <nav className="nav" onMouseOver={handleSubMenu}>
       <div className="nav-center">
         <div className="nav-header">
           <img src={logo} className="nav-logo" alt="stripe" />

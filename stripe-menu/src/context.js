@@ -9,7 +9,7 @@ export const AppProvider = ({ children }) => {
     const [isSideBarOpen, setSideBarOpen] = useState(false);
     const [isSubMenuOpen, setSubMenuOpen] = useState(false);
     const [location, setLocation] = useState({});
-    const [page, setPage] = useState({page: '', links:[]})
+    const [page, setPage] = useState({ page: '', links:[] })
 
     const openSideBar = () => {
         setSideBarOpen(true);
@@ -27,16 +27,17 @@ export const AppProvider = ({ children }) => {
         setSubMenuOpen(false);
     }
     return (
-        <AppContext.Provider  value={{
-            isSideBarOpen, 
-            isSubMenuOpen, 
-            openSideBar, 
-            closeSideBar, 
-            openSubMenu,
-            closeSubMenu,
-            location,
-            page, 
-        }}
+        <AppContext.Provider  
+            value={{
+                isSideBarOpen, 
+                isSubMenuOpen, 
+                openSideBar, 
+                closeSideBar, 
+                openSubMenu,
+                closeSubMenu,
+                location,
+                page, 
+            }}
         >
             {children}
         </AppContext.Provider>
