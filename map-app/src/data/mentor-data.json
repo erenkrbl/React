@@ -1,0 +1,205 @@
+[
+  {
+    "id": 120,
+    "locationId": "oxnardcasupercharger",
+    "name": "Oxnard, CA",
+    "status": "OPEN",
+    "address": {
+      "street": "2751 Park View Ct",
+      "city": "Oxnard",
+      "state": "CA",
+      "zip": "93036",
+      "countryId": 100,
+      "country": "USA",
+      "regionId": 100,
+      "region": "North America"
+    },
+    "gps": {
+      "latitude": 34.238654,
+      "longitude": -119.177398
+    },
+    "dateOpened": "2014-09-24",
+    "stallCount": 20,
+    "counted": true,
+    "elevationMeters": 24,
+    "powerKilowatt": 150,
+    "solarCanopy": false,
+    "battery": false,
+    "statusDays": 0,
+    "urlDiscuss": true
+  },
+  {
+    "id": 2215,
+    "locationId": "dangjinsupercharger",
+    "name": "Dangjin, South Korea",
+    "status": "OPEN",
+    "address": {
+      "street": "충남 당진시 송악읍 송악로 63",
+      "city": "당진",
+      "state": "48",
+      "zip": null,
+      "countryId": 137,
+      "country": "South Korea",
+      "regionId": 102,
+      "region": "Asia Pacific"
+    },
+    "gps": {
+      "latitude": 36.909503,
+      "longitude": 126.69407466
+    },
+    "dateOpened": "2019-12-20",
+    "stallCount": 6,
+    "counted": true,
+    "elevationMeters": 42,
+    "powerKilowatt": 120,
+    "solarCanopy": false,
+    "battery": false,
+    "statusDays": 0,
+    "urlDiscuss": false
+  },
+  {
+    "id": 2216,
+    "locationId": "seoulgangseosupercharger",
+    "name": "Seoul - Gangseo, South Korea",
+    "status": "OPEN",
+    "address": {
+      "street": "서울특별시 강서구 하늘길 38",
+      "city": "서울",
+      "state": null,
+      "zip": null,
+      "countryId": 137,
+      "country": "South Korea",
+      "regionId": 102,
+      "region": "Asia Pacific"
+    },
+    "gps": {
+      "latitude": 37.563265,
+      "longitude": 126.803108
+    },
+    "dateOpened": "2019-12-20",
+    "stallCount": 4,
+    "counted": true,
+    "elevationMeters": 13,
+    "powerKilowatt": 120,
+    "solarCanopy": false,
+    "battery": false,
+    "statusDays": 0,
+    "urlDiscuss": false
+  },
+  {
+    "id": 209,
+    "locationId": "vienna",
+    "name": "Vienna - Tech Park Vienna (SC), Austria",
+    "status": "OPEN",
+    "address": {
+      "street": "Gutheil Schoder-Gasse 17",
+      "city": "Vienna",
+      "state": null,
+      "zip": "1230",
+      "countryId": 102,
+      "country": "Austria",
+      "regionId": 101,
+      "region": "Europe"
+    },
+    "gps": {
+      "latitude": 48.1574455,
+      "longitude": 16.3345536
+    },
+    "dateOpened": "2014-04-30",
+    "stallCount": 4,
+    "counted": true,
+    "elevationMeters": 190,
+    "powerKilowatt": 150,
+    "solarCanopy": false,
+    "battery": false,
+    "statusDays": 0,
+    "urlDiscuss": true
+  },
+  {
+    "id": 219,
+    "locationId": "oosterhoutsupercharger",
+    "name": "Oosterhout, Netherlands",
+    "status": "OPEN",
+    "address": {
+      "street": "Beneluxweg 1",
+      "city": "Oosterhout",
+      "state": null,
+      "zip": "4904 SJ",
+      "countryId": 104,
+      "country": "Netherlands",
+      "regionId": 101,
+      "region": "Europe"
+    },
+    "gps": {
+      "latitude": 51.626423,
+      "longitude": 4.869517
+    },
+    "dateOpened": "2013-12-06",
+    "stallCount": 12,
+    "counted": true,
+    "elevationMeters": 7,
+    "powerKilowatt": 150,
+    "solarCanopy": false,
+    "battery": false,
+    "statusDays": 0,
+    "urlDiscuss": false
+  },
+  {
+    "id": 228,
+    "locationId": "lullysupercharger",
+    "name": "Lully, Switzerland",
+    "status": "OPEN",
+    "address": {
+      "street": "Restoroute 1470 Lully FR (Autogrill)",
+      "city": "Lully",
+      "state": null,
+      "zip": "1470",
+      "countryId": 106,
+      "country": "Switzerland",
+      "regionId": 101,
+      "region": "Europe"
+    },
+    "gps": {
+      "latitude": 46.832137,
+      "longitude": 6.859096
+    },
+    "dateOpened": "2013-12-13",
+    "stallCount": 10,
+    "counted": true,
+    "elevationMeters": 490,
+    "powerKilowatt": 125,
+    "solarCanopy": false,
+    "battery": false,
+    "statusDays": 0,
+    "urlDiscuss": false
+  },
+  {
+    "id": 217,
+    "locationId": "regensburgostsupercharger",
+    "name": "Regensburg, Germany",
+    "status": "OPEN",
+    "address": {
+      "street": "Junkersstraße 3",
+      "city": "Regensburg",
+      "state": null,
+      "zip": "93055",
+      "countryId": 103,
+      "country": "Germany",
+      "regionId": 101,
+      "region": "Europe"
+    },
+    "gps": {
+      "latitude": 48.994967,
+      "longitude": 12.150416
+    },
+    "dateOpened": "2014-06-18",
+    "stallCount": 8,
+    "counted": true,
+    "elevationMeters": 333,
+    "powerKilowatt": 150,
+    "solarCanopy": false,
+    "battery": false,
+    "statusDays": 0,
+    "urlDiscuss": true
+  }
+]
