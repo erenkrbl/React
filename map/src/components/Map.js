@@ -1,5 +1,6 @@
 import React from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { blueIcon, redIcon } from './Icons';
 import "./styles.css";
 
 function Map() {
@@ -22,7 +23,10 @@ function Map() {
       />
       {locations.map((location, index) => {
         return (
-          <Marker position={location.position} key={index}>
+          <Marker
+            position={location.position}
+            key={index}
+            icon={location.name === "menti" ? blueIcon : redIcon}>
             <Popup>
               Name: {location.name} <br />
               latitude: {location.position[0]}
