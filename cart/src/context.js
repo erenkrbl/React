@@ -4,6 +4,7 @@ import reducer from './reducer'
 // ATTENTION!!!!!!!!!!
 // I SWITCHED TO PERMANENT DOMAIN
 const url = 'https://course-api.com/react-useReducer-cart-project'
+//const url = 'https://course-api.netlify.app/api/react-useReducer-cart-project'
 const AppContext = React.createContext()
 
 const initialState = {
@@ -31,6 +32,17 @@ const AppProvider = ({ children }) => {
   const decrease = (id) => {
     dispatch({ type: 'DECREASE', payload: id})
   }
+
+  const fetchData = async () => {
+    dispatch({ type: 'LOADING'})
+    const response = await fetch(url)
+    const cart = await response.json()
+    dispatch({ type: 'DISPLAY_ITEMS', payload: cart })
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
 
   useEffect(()=>{
     dispatch({ type: 'GET_TOTALS'})
